@@ -1,0 +1,3 @@
+module main(input reset, input asp, input got, input adb);
+
+	

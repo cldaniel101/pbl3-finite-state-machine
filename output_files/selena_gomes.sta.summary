@@ -1,0 +1,329 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clock_divisor:comb_14|flipflop_t:comb_7|q'
+Slack : -4.560
+TNS   : -25.302
+
+Type  : Setup 'MEF2:comb_17|state.NADA'
+Slack : -3.459
+TNS   : -10.939
+
+Type  : Setup 'clock_divisor:comb_14|flipflop_t:comb_5|q'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_11|flipflop_t:comb_5|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_12|flipflop_t:comb_3|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_12|flipflop_t:comb_7|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_13|flipflop_t:comb_6|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_10|flipflop_t:comb_5|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_11|flipflop_t:comb_3|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_12|flipflop_t:comb_5|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_13|flipflop_t:comb_4|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_14|flipflop_t:comb_3|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_10|flipflop_t:comb_4|q'
+Slack : 0.800
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_12|flipflop_t:comb_4|q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_13|flipflop_t:comb_3|q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_14|flipflop_t:comb_4|q'
+Slack : 0.811
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_10|flipflop_t:comb_7|q'
+Slack : 0.824
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_13|flipflop_t:comb_7|q'
+Slack : 0.825
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_10|flipflop_t:comb_6|q'
+Slack : 0.839
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_14|flipflop_t:comb_6|q'
+Slack : 0.841
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_11|flipflop_t:comb_6|q'
+Slack : 0.851
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_11|flipflop_t:comb_7|q'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_10|flipflop_t:comb_3|q'
+Slack : 1.131
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_13|flipflop_t:comb_5|q'
+Slack : 1.170
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_12|flipflop_t:comb_6|q'
+Slack : 1.224
+TNS   : 0.000
+
+Type  : Setup 'clock_divisor:comb_11|flipflop_t:comb_4|q'
+Slack : 1.397
+TNS   : 0.000
+
+Type  : Setup 'clock'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Hold 'MEF2:comb_17|state.NADA'
+Slack : -4.621
+TNS   : -12.440
+
+Type  : Hold 'clock_divisor:comb_14|flipflop_t:comb_7|q'
+Slack : -2.306
+TNS   : -2.306
+
+Type  : Hold 'clock'
+Slack : -1.720
+TNS   : -1.720
+
+Type  : Hold 'clock_divisor:comb_11|flipflop_t:comb_4|q'
+Slack : -1.451
+TNS   : -1.451
+
+Type  : Hold 'clock_divisor:comb_12|flipflop_t:comb_6|q'
+Slack : -1.278
+TNS   : -1.278
+
+Type  : Hold 'clock_divisor:comb_13|flipflop_t:comb_5|q'
+Slack : -1.224
+TNS   : -1.224
+
+Type  : Hold 'clock_divisor:comb_10|flipflop_t:comb_3|q'
+Slack : -1.185
+TNS   : -1.185
+
+Type  : Hold 'clock_divisor:comb_11|flipflop_t:comb_7|q'
+Slack : -1.145
+TNS   : -1.145
+
+Type  : Hold 'clock_divisor:comb_11|flipflop_t:comb_6|q'
+Slack : -0.905
+TNS   : -0.905
+
+Type  : Hold 'clock_divisor:comb_14|flipflop_t:comb_6|q'
+Slack : -0.895
+TNS   : -0.895
+
+Type  : Hold 'clock_divisor:comb_10|flipflop_t:comb_6|q'
+Slack : -0.893
+TNS   : -0.893
+
+Type  : Hold 'clock_divisor:comb_13|flipflop_t:comb_7|q'
+Slack : -0.879
+TNS   : -0.879
+
+Type  : Hold 'clock_divisor:comb_10|flipflop_t:comb_7|q'
+Slack : -0.878
+TNS   : -0.878
+
+Type  : Hold 'clock_divisor:comb_14|flipflop_t:comb_4|q'
+Slack : -0.865
+TNS   : -0.865
+
+Type  : Hold 'clock_divisor:comb_12|flipflop_t:comb_4|q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'clock_divisor:comb_13|flipflop_t:comb_3|q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'clock_divisor:comb_10|flipflop_t:comb_4|q'
+Slack : -0.854
+TNS   : -0.854
+
+Type  : Hold 'clock_divisor:comb_10|flipflop_t:comb_5|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'clock_divisor:comb_11|flipflop_t:comb_3|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'clock_divisor:comb_12|flipflop_t:comb_5|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'clock_divisor:comb_13|flipflop_t:comb_4|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'clock_divisor:comb_14|flipflop_t:comb_3|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'clock_divisor:comb_11|flipflop_t:comb_5|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'clock_divisor:comb_12|flipflop_t:comb_3|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'clock_divisor:comb_12|flipflop_t:comb_7|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'clock_divisor:comb_13|flipflop_t:comb_6|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'clock_divisor:comb_14|flipflop_t:comb_5|q'
+Slack : -0.511
+TNS   : -0.511
+
+Type  : Minimum Pulse Width 'clock'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_10|flipflop_t:comb_3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_10|flipflop_t:comb_4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_10|flipflop_t:comb_5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_10|flipflop_t:comb_6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_10|flipflop_t:comb_7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_11|flipflop_t:comb_3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_11|flipflop_t:comb_4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_11|flipflop_t:comb_5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_11|flipflop_t:comb_6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_11|flipflop_t:comb_7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_12|flipflop_t:comb_3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_12|flipflop_t:comb_4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_12|flipflop_t:comb_5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_12|flipflop_t:comb_6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_12|flipflop_t:comb_7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_13|flipflop_t:comb_3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_13|flipflop_t:comb_4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_13|flipflop_t:comb_5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_13|flipflop_t:comb_6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_13|flipflop_t:comb_7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_14|flipflop_t:comb_3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_14|flipflop_t:comb_4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_14|flipflop_t:comb_5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_14|flipflop_t:comb_6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock_divisor:comb_14|flipflop_t:comb_7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'MEF2:comb_17|state.NADA'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

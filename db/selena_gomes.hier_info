@@ -1,0 +1,293 @@
+|main
+limpeza[0] <= limp_register:comb_16.port0
+limpeza[1] <= limp_register:comb_16.port0
+VE <= VE.DB_MAX_OUTPUT_PORT_TYPE
+cout_Nivel[0] <= nivel_caixa:comb_15.port0
+cout_Nivel[1] <= nivel_caixa:comb_15.port0
+cout_Nivel[2] <= nivel_caixa:comb_15.port0
+reset => reset.IN4
+asp => asp.IN1
+got => got.IN1
+adb => comb.IN0
+clock => clock.IN1
+test_MEF1_b1 <= limp_register:comb_16.port0
+test_MEF1_b0 <= limp_register:comb_16.port0
+
+
+|main|clock_divisor:comb_10
+new_frequency <= flipflop_t:comb_7.port0
+clock => clock.IN1
+reset => reset.IN5
+
+
+|main|clock_divisor:comb_10|flipflop_t:comb_3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_10|flipflop_t:comb_4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_10|flipflop_t:comb_5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_10|flipflop_t:comb_6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_10|flipflop_t:comb_7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_11
+new_frequency <= flipflop_t:comb_7.port0
+clock => clock.IN1
+reset => reset.IN5
+
+
+|main|clock_divisor:comb_11|flipflop_t:comb_3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_11|flipflop_t:comb_4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_11|flipflop_t:comb_5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_11|flipflop_t:comb_6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_11|flipflop_t:comb_7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_12
+new_frequency <= flipflop_t:comb_7.port0
+clock => clock.IN1
+reset => reset.IN5
+
+
+|main|clock_divisor:comb_12|flipflop_t:comb_3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_12|flipflop_t:comb_4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_12|flipflop_t:comb_5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_12|flipflop_t:comb_6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_12|flipflop_t:comb_7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_13
+new_frequency <= flipflop_t:comb_7.port0
+clock => clock.IN1
+reset => reset.IN5
+
+
+|main|clock_divisor:comb_13|flipflop_t:comb_3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_13|flipflop_t:comb_4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_13|flipflop_t:comb_5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_13|flipflop_t:comb_6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_13|flipflop_t:comb_7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_14
+new_frequency <= flipflop_t:comb_7.port0
+clock => clock.IN1
+reset => reset.IN5
+
+
+|main|clock_divisor:comb_14|flipflop_t:comb_3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_14|flipflop_t:comb_4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_14|flipflop_t:comb_5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_14|flipflop_t:comb_6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|clock_divisor:comb_14|flipflop_t:comb_7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => q~reg0.CLK
+reset => q.OUTPUTSELECT
+t => q.OUTPUTSELECT
+
+
+|main|nivel_caixa:comb_15
+count[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+Valve_E <= ve.DB_MAX_OUTPUT_PORT_TYPE
+upper => always1.IN1
+upper => always1.IN1
+upper => always1.IN1
+upper => Mux4.IN1
+clock => state[0].CLK
+clock => state[1].CLK
+clock => state[2].CLK
+reset => state[0].ACLR
+reset => state[1].ACLR
+reset => state[2].ACLR
+
+
+|main|limp_register:comb_16
+cout[0] <= cout[0].DB_MAX_OUTPUT_PORT_TYPE
+cout[1] <= cout[1].DB_MAX_OUTPUT_PORT_TYPE
+adb => always1.IN0
+adb => always1.IN0
+low => always1.IN1
+low => always1.IN0
+low => always1.IN1
+ve => always1.IN1
+ve => always1.IN1
+ve => always1.IN1
+reset => state~3.DATAIN
+clock => state~1.DATAIN
+
+
+|main|MEF2:comb_17
+cout[0] <= cout[0].DB_MAX_OUTPUT_PORT_TYPE
+cout[1] <= cout[1].DB_MAX_OUTPUT_PORT_TYPE
+CLK => state~1.DATAIN
+reset => state~3.DATAIN
+asp => always1.IN0
+asp => always1.IN0
+asp => always1.IN0
+got => always1.IN1
+got => always1.IN1
+got => always1.IN1
+
+
+|main|MEF1:comb_18
+cout[0] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+cout[1] <= cout.DB_MAX_OUTPUT_PORT_TYPE
+c => always1.IN0
+c => always1.IN0
+c => always1.IN0
+c => always1.IN0
+c => always1.IN0
+ve => always1.IN1
+ve => always1.IN0
+ve => always1.IN1
+ve => always1.IN0
+ve => always1.IN1
+ve => always1.IN1
+rega => always1.IN1
+rega => nextstate.DATAA
+rega => always1.IN1
+rega => always1.IN1
+rega => always1.IN1
+rega => always1.IN1
+rega => always1.IN1
+rega => nextstate.DATAA
+rega => always1.IN1
+reset => state~3.DATAIN
+clock => state~1.DATAIN
+
+

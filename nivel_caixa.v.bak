@@ -1,0 +1,64 @@
+module nivel_caixa (
+    output [2:0] count,
+
+    input upper,
+    input clock,
+    input reset
+);
+	clock_divisor(newclk0, clock, 1);
+	
+	clock_divisor(newclk1, newclk0, 1);
+	
+	clock_divisor(newclk2, newclk1, 1);
+	clock_divisor(newclk3, newclk2, 1);
+	clock_divisor(newclk4, newclk3, 1);
+	not (resetN,reset);
+	
+	
+    reg [2:0] state, next_state;
+	 reg ve;
+	
+    always @(posedge newclk4, posedge resetN)
+    if (resetN) begin
+	 state <= 4'b000;
+	 
+	 end
+    else state <= next_state;
+
+
+    always @(*)
+    case (state)
+       
+		 4'b000:begin;
+				ve <= 1;
+            if (!upper & ve) next_state <= state + 1;
+            else next_state <= state;
+			end
+        
+		  4'b111:begin
+				ve<=0;
+            if (upper ) next_state <= state - 1;
+				else next_state <= state ;
+         end
+			
+			4'b001:begin
+			if (!upper & !ve)begin 
+				ve <= 1;
+				next_state <= state + 1;
+			 end 
+			 else if (!upper & ve) next_state <= state + 1;
+			 else if (upper & !ve) next_state <= state - 1;
+
+			end
+      
+		default:begin
+            if (!upper & ve) next_state <= state + 1;
+				else if (upper & !ve) next_state <= state - 1;
+				else next_state <= state ;
+        
+				end
+    endcase
+
+    assign count = state;
+
+endmodule
