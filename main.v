@@ -19,12 +19,14 @@ clock_divisor(new_frequency4, new_frequency3, 1);
 clock_divisor(new_frequency5, new_frequency4, 1);
 
 	
+	valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza);
+
 	
 	nivel_caixa(cout_Nivel,VE , rega_open, new_frequency5, reset);
 	
 	limp_register(limpeza, aduba, Low, VE, reset, new_frequency5);
 	
-	MEF2 (cout_MEF2, new_frequency5, reset, asp, got);
+	MEF2 (cout_MEF2, new_frequency5, reset, rega_valida);
 	MEF1(cout_MEF1, c,VE , rega, reset, new_frequency5);
 
 	assign test_MEF1_b1 = limpeza[1];
