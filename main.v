@@ -36,7 +36,8 @@ module main(
 	xor (rega_open, cout_MEF2[1] ,cout_MEF2[0]);
 	or (Low, cout_Nivel[2], cout_Nivel[1]);
 	nand (aduba, adbN, asp);
-
+	wire[1:0]rega_valida;
+	
 	clock_divisor(new_frequency1, clock, 1);
 	clock_divisor(new_frequency2, new_frequency1, 1);
 	clock_divisor(new_frequency3, new_frequency2, 1);
@@ -44,9 +45,9 @@ module main(
 	clock_divisor(new_frequency5, new_frequency4, 1);
 
 	
-	valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza);
+	valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza[1],VE);
 	
-	nivel_caixa(cout_Nivel,VE , rega_open, new_frequency5, reset);
+	nivel_caixa(cout_Nivel,VE , rega_open, new_frequency5, reset, erro);
 	
 	limp_register(limpeza, aduba, Low, VE, reset, new_frequency5);
 	
@@ -55,8 +56,8 @@ module main(
 	MEF1(cout_MEF1, c,VE , rega, reset, new_frequency5);
 
 
-	assign test_MEF1_b1 = limpeza[1];
-	assign test_MEF1_b0 = limpeza[0];
+	assign test_MEF1_b1 = cout_MEF2[1];
+	assign test_MEF1_b0 = cout_MEF2[0];
 
 	wire [6:0] column_4, column_3, column_2, column_1, column_0;
     wire [6:0] selected_matrix_column;

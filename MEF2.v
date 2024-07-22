@@ -1,8 +1,8 @@
 module MEF2 ( output [1:0]cout, input CLK, input reset, input [1:0] rega);
 
 	parameter NADA = 2'b00;
-	parameter ASP = 2'b01;
-	parameter GOT = 2'b10;
+	parameter ASP = 2'b10;
+	parameter GOT = 2'b01;
 	
 	assign asp = rega[1];
 	assign got = rega[0];
