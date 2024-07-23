@@ -1,11 +1,12 @@
 module main(
 	output [1:0]limpeza,
-	output VE, 
-	output [2:0] cout_Nivel, 
+
 	output test_MEF1_b1, 
 	output test_MEF1_b0,
 	output erro,
 	output rgb_l,
+	output rgb_verde,
+	output led_valvule,
 
 	output matrix_col_4,
     output matrix_col_3,
@@ -27,7 +28,7 @@ module main(
 	input adb, 
 	input clock
 );
-
+	wire [2:0] cout_Nivel; 
 	not (reset_pulse, reset);
 	not (adbN,adb);
 	or (rega, asp,got, limpeza);
@@ -52,11 +53,15 @@ module main(
 	assign limp = limpeza[1];
 	and (rgb_l, not_erro, limp);
 	
+	and (rgb_verde, not_erro, limpeza[0]);
+	
+	and (led_valvule, not_erro, VE);
+	
 	
 	clock_selector(new_clock,new_frequency4, cout_MEF2, limpeza, erro,VE);
 
 	
-	valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza[1],VE);
+	valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza,VE,c);
 	
 	
 	

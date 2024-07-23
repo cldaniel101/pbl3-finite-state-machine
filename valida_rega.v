@@ -2,8 +2,9 @@ module valida_rega(output [1:0]rega, output erro,
 input asp, 
 input got, 
 input [1:0] mef1, 
-input limpeza,
-input VE
+input [1:0]limpeza,
+input VE,
+input critico
 
 );
 
@@ -11,9 +12,13 @@ input VE
 	assign not_asp = ~asp;
 	assign not_got = ~got;
 	assign not_erro = ~erro;
-
-
-
+	assign aduba = limpeza[0];
+	assign not_duba = ~aduba; 
+	assign not_critico = ~critico; 
+	
+	
+	and(erro_nivel, not_critico, rega_chave);
+	and(erro_aduba, aduba, got);
 	and(mef1_rega, mef1[1], mef1[0]);
 	and(erro_estado_rega, not_rega, rega_chave);
 	and (erro_sensor_rega, asp,got);
@@ -22,7 +27,7 @@ input VE
 	or(rega_chave, asp, got);
 	
 	//Output erro
-	or(erro, erro_estado_rega,erro_sensor_rega, Erro_enchimento);
+	or(erro, erro_aduba ,erro_estado_rega,erro_sensor_rega, Erro_enchimento,erro_nivel);
 	
 	and(out_asp, asp, not_got, not_erro);
 	and(out_got,not_asp,got,not_erro);
