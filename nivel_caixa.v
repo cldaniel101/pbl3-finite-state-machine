@@ -70,7 +70,9 @@ module nivel_caixa (
             default: begin
                 if (erro) begin
                     next_state = state;
-                end else if (!upper && ve && !erro) begin
+                end 
+					 else if (!upper && !ve && !erro) next_state = state;
+					 else if (!upper && ve && !erro) begin
                     next_state = state + 1;
                 end else if (upper && !ve && !erro) begin
                     next_state = state - 1;

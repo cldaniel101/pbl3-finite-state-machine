@@ -97,3 +97,4 @@ set_global_assignment -name VERILOG_FILE output_files/clock_selector.v
 set_global_assignment -name VERILOG_FILE little_clock_divisor.v
 set_location_assignment PIN_86 -to erro
 set_location_assignment PIN_74 -to rgb_l
+set_location_assignment PIN_75 -to limpeza[1]
