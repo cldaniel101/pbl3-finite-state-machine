@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPM240T100) Path("/home/aluno/PBL3_implementa3/output_files/") File("selena_gomes.pof") MfrSpec(OpMask(1) SEC_Device(EPM240T100) Child_OpMask(2 1 1));
+		Device PartName(EPM240T100) Path("/home/aluno/PBL3_2teste/pbl3-finite-state-machine-Paulo1302-patch-2/output_files/") File("selena_gomes.pof") MfrSpec(OpMask(1) SEC_Device(EPM240T100) Child_OpMask(2 1 1));
 
 ChainEnd;
 

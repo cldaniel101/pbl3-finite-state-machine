@@ -1,18 +1,18 @@
 
-State Machine - |main|MEF1:comb_18|state
+State Machine - |main|MEF1:comb_24|state
 Name state.REGA state.ERRO state.EN state.VZ 
 state.VZ 0 0 0 0 
 state.EN 0 0 1 1 
 state.ERRO 0 1 0 1 
 state.REGA 1 0 0 1 
 
-State Machine - |main|MEF2:comb_17|state
-Name state.NADA state.GOT state.ASP 
+State Machine - |main|MEF2:comb_23|state
+Name state.NADA state.ASP state.GOT 
 state.NADA 0 0 0 
-state.ASP 1 0 1 
-state.GOT 1 1 0 
+state.GOT 1 0 1 
+state.ASP 1 1 0 
 
-State Machine - |main|limp_register:comb_16|state
+State Machine - |main|limp_register:comb_22|state
 Name state.NADA state.LIMP state.ADB 
 state.NADA 0 0 0 
 state.ADB 1 0 1 
