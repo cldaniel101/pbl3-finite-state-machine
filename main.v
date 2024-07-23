@@ -6,6 +6,8 @@ module main (
     output test_MEF1_b0,
     output erro,
     output rgb_l,
+	output rgb_verde,
+	output led_valvule,
     output matrix_col_4,
     output matrix_col_3,
     output matrix_col_2,
@@ -30,6 +32,7 @@ module main (
     wire [1:0] cout_MEF1, cout_MEF2, rega_valida;
     wire new_clock;
     wire [6:0] column_4, column_3, column_2, column_1, column_0;
+	wire [2:0] cout_Nivel;
 
     // Logic
     not (reset_pulse, reset);
@@ -52,10 +55,12 @@ module main (
     // Assignments
     assign limp = limpeza[1];
     and (rgb_l, not_erro, limp);
+	and (rgb_verde, not_erro, limpeza[0]);
+	and (led_valvule, not_erro, VE);
 
     // Modules
     clock_selector(new_clock, new_frequency4, cout_MEF2, limpeza, erro, VE);
-    valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza[1], VE);
+    valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza, VE, critic);
     nivel_caixa(cout_Nivel, VE, rega_open, new_clock, reset, erro);
     limp_register(limpeza, rega, aduba, Low, VE, critic, reset, new_frequency3);
     MEF2(cout_MEF2, new_frequency3, reset, rega_valida);
