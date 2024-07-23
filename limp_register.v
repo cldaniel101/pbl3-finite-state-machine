@@ -4,6 +4,7 @@ module limp_register(
     input adb,
     input low,
     input ve,
+    input critico,
     input reset,
     input clock
 );
@@ -40,13 +41,13 @@ module limp_register(
                 if (!ve & !low)
                     nextstate = LIMP;
                 else
-                    nextstate = ADB;
+                    nextstate = state;
             
             LIMP: 
                 if (ve & !adbn & !low)
                     nextstate = NADA;
                 else if (!ve & !adbn & !low)
-                    nextstate = LIMP;
+                    nextstate = state;
             
             default: 
                 nextstate = NADA;

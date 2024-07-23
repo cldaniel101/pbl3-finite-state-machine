@@ -16,7 +16,6 @@ module valida_rega (
     assign not_asp = ~asp;
     assign not_got = ~got;
     assign not_erro = ~erro;
-    assign not_critico = ~erro;
 
     and (mef1_rega, mef1[1], mef1[0]);
     and (erro_estado_rega, not_rega, rega_chave);
@@ -26,7 +25,7 @@ module valida_rega (
     or (rega_chave, asp, got);
 
     // Output erro
-    or (erro, erro_estado_rega, erro_sensor_rega, Erro_enchimento, erro_adb_limp);
+    or (erro, erro_estado_rega, erro_sensor_rega, Erro_enchimento);
 
     and (out_asp, asp, not_got, not_erro);
     and (out_got, not_asp, got, not_erro);

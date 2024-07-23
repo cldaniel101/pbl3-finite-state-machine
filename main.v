@@ -54,10 +54,10 @@ module main (
     and (rgb_l, not_erro, limp);
 
     // Modules
-    clock_selector(new_clock, new_frequency4, cout_MEF2, limpeza, erro);
+    clock_selector(new_clock, new_frequency4, cout_MEF2, limpeza, erro, VE);
     valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza[1], VE);
     nivel_caixa(cout_Nivel, VE, rega_open, new_clock, reset, erro);
-    limp_register(limpeza, rega, aduba, Low, VE, reset, new_frequency3);
+    limp_register(limpeza, rega, aduba, Low, VE, critic, reset, new_frequency3);
     MEF2(cout_MEF2, new_frequency3, reset, rega_valida);
     MEF1(cout_MEF1, critic, VE, rega, reset, new_frequency3);
 
