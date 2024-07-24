@@ -1,0 +1,855 @@
+Analysis & Synthesis report for pbl3-finite-state-machine
+Tue Jul 23 21:00:14 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |main|MEF1:comb_26|state
+  9. State Machine - |main|MEF2:comb_25|state
+ 10. State Machine - |main|limp_register:comb_24|state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: limp_register:comb_24
+ 17. Parameter Settings for User Entity Instance: MEF2:comb_25
+ 18. Parameter Settings for User Entity Instance: MEF1:comb_26
+ 19. Parameter Settings for User Entity Instance: matrix_alternate_display_mode:comb_29|matrix_image_selector:comb_3
+ 20. Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D0"
+ 21. Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D1"
+ 22. Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D2"
+ 23. Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D3"
+ 24. Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D4"
+ 25. Port Connectivity Checks: "clock_selector:comb_21|clock_divisor:comb_8"
+ 26. Port Connectivity Checks: "clock_selector:comb_21|clock_divisor:comb_7"
+ 27. Port Connectivity Checks: "clock_selector:comb_21|little_clock_divisor:comb_6"
+ 28. Port Connectivity Checks: "clock_selector:comb_21|little_clock_divisor:comb_5"
+ 29. Port Connectivity Checks: "clock_selector:comb_21|little_clock_divisor:comb_4|flipflop_t:comb_3"
+ 30. Port Connectivity Checks: "clock_selector:comb_21|little_clock_divisor:comb_4"
+ 31. Port Connectivity Checks: "clock_selector:comb_21|clock_divisor:comb_3"
+ 32. Port Connectivity Checks: "clock_divisor:comb_16"
+ 33. Port Connectivity Checks: "clock_divisor:comb_15"
+ 34. Port Connectivity Checks: "clock_divisor:comb_14"
+ 35. Port Connectivity Checks: "clock_divisor:comb_13"
+ 36. Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_7"
+ 37. Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_6"
+ 38. Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_5"
+ 39. Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_4"
+ 40. Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_3"
+ 41. Port Connectivity Checks: "clock_divisor:comb_12"
+ 42. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Jul 23 21:00:14 2024       ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; pbl3-finite-state-machine                   ;
+; Top-level Entity Name       ; main                                        ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 120                                         ;
+; Total pins                  ; 29                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                     ;
++------------------------------------------------------------------+--------------------+---------------------------+
+; Option                                                           ; Setting            ; Default Value             ;
++------------------------------------------------------------------+--------------------+---------------------------+
+; Device                                                           ; EPM240T100C5       ;                           ;
+; Top-level entity name                                            ; main               ; pbl3-finite-state-machine ;
+; Family name                                                      ; MAX II             ; Cyclone V                 ;
+; Use smart compilation                                            ; Off                ; Off                       ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                        ;
+; Enable compact report table                                      ; Off                ; Off                       ;
+; Restructure Multiplexers                                         ; Auto               ; Auto                      ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                       ;
+; Preserve fewer node names                                        ; On                 ; On                        ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable                    ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001              ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993                 ;
+; State Machine Processing                                         ; Auto               ; Auto                      ;
+; Safe State Machine                                               ; Off                ; Off                       ;
+; Extract Verilog State Machines                                   ; On                 ; On                        ;
+; Extract VHDL State Machines                                      ; On                 ; On                        ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                       ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                      ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                       ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                        ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                        ;
+; Parallel Synthesis                                               ; On                 ; On                        ;
+; NOT Gate Push-Back                                               ; On                 ; On                        ;
+; Power-Up Don't Care                                              ; On                 ; On                        ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                       ;
+; Remove Duplicate Registers                                       ; On                 ; On                        ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                       ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                       ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                       ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                       ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                       ;
+; Ignore SOFT Buffers                                              ; On                 ; On                        ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                       ;
+; Optimization Technique                                           ; Balanced           ; Balanced                  ;
+; Carry Chain Length                                               ; 70                 ; 70                        ;
+; Auto Carry Chains                                                ; On                 ; On                        ;
+; Auto Open-Drain Pins                                             ; On                 ; On                        ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                       ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto                      ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                      ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                        ;
+; Allow Synchronous Control Signals                                ; On                 ; On                        ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                       ;
+; Auto Resource Sharing                                            ; Off                ; Off                       ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                        ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                       ;
+; Report Parameter Settings                                        ; On                 ; On                        ;
+; Report Source Assignments                                        ; On                 ; On                        ;
+; Report Connectivity Checks                                       ; On                 ; On                        ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                       ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                         ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation        ;
+; HDL message level                                                ; Level2             ; Level2                    ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                       ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                      ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                      ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                       ;
+; Clock MUX Protection                                             ; On                 ; On                        ;
+; Block Design Naming                                              ; Auto               ; Auto                      ;
+; Synthesis Effort                                                 ; Auto               ; Auto                      ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                        ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium                    ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                      ;
++------------------------------------------------------------------+--------------------+---------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
++------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                           ; Library ;
++------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; main.v                                         ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v                                         ;         ;
+; mefs/MEF1.v                                    ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF1.v                                    ;         ;
+; mefs/MEF2.v                                    ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF2.v                                    ;         ;
+; modules/functions/decoder_caixa_dagua.v        ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/decoder_caixa_dagua.v        ;         ;
+; modules/functions/limp_register.v              ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v              ;         ;
+; modules/functions/nivel_caixa.v                ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v                ;         ;
+; modules/functions/valida_rega.v                ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v                ;         ;
+; modules/matrix/column_selector.v               ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/column_selector.v               ;         ;
+; modules/matrix/matrix_alternate_display_mode.v ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v ;         ;
+; modules/matrix/matrix_column_selector.v        ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_column_selector.v        ;         ;
+; modules/matrix/matrix_image_selector.v         ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_image_selector.v         ;         ;
+; utils/clock_divisor.v                          ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v                          ;         ;
+; utils/flipflop_d.v                             ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_d.v                             ;         ;
+; utils/flipflop_t.v                             ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_t.v                             ;         ;
+; utils/little_clock_divisor.v                   ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v                   ;         ;
+; utils/clock_selector.v                         ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v                         ;         ;
++------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 120   ;
+;     -- Combinational with no register       ; 64    ;
+;     -- Register only                        ; 8     ;
+;     -- Combinational with a register        ; 48    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 52    ;
+;     -- 3 input functions                    ; 14    ;
+;     -- 2 input functions                    ; 10    ;
+;     -- 1 input functions                    ; 36    ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 120   ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 22    ;
+;                                             ;       ;
+; Total registers                             ; 56    ;
+; I/O pins                                    ; 29    ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 22    ;
+; Total fan-out                               ; 416   ;
+; Average fan-out                             ; 2.79  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
++--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------+-------------------------------+--------------+
+; Compilation Hierarchy Node                 ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                        ; Entity Name                   ; Library Name ;
++--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------+-------------------------------+--------------+
+; |main                                      ; 120 (6)     ; 56           ; 0          ; 29   ; 0            ; 64 (6)       ; 8 (0)             ; 48 (0)           ; 0 (0)           ; 0 (0)      ; |main                                                                      ; main                          ; work         ;
+;    |MEF1:comb_26|                          ; 11 (11)     ; 4            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |main|MEF1:comb_26                                                         ; MEF1                          ; work         ;
+;    |MEF2:comb_25|                          ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |main|MEF2:comb_25                                                         ; MEF2                          ; work         ;
+;    |clock_divisor:comb_12|                 ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_12                                                ; clock_divisor                 ; work         ;
+;       |flipflop_t:comb_3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_12|flipflop_t:comb_3                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_12|flipflop_t:comb_4                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_5|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_12|flipflop_t:comb_5                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_6|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_12|flipflop_t:comb_6                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_7|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_12|flipflop_t:comb_7                              ; flipflop_t                    ; work         ;
+;    |clock_divisor:comb_13|                 ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_13                                                ; clock_divisor                 ; work         ;
+;       |flipflop_t:comb_3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_13|flipflop_t:comb_3                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_13|flipflop_t:comb_4                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_5|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_13|flipflop_t:comb_5                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_6|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_13|flipflop_t:comb_6                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_7|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_13|flipflop_t:comb_7                              ; flipflop_t                    ; work         ;
+;    |clock_divisor:comb_14|                 ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_14                                                ; clock_divisor                 ; work         ;
+;       |flipflop_t:comb_3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_14|flipflop_t:comb_3                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_14|flipflop_t:comb_4                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_5|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_14|flipflop_t:comb_5                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_6|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_14|flipflop_t:comb_6                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_7|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_14|flipflop_t:comb_7                              ; flipflop_t                    ; work         ;
+;    |clock_divisor:comb_15|                 ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_15                                                ; clock_divisor                 ; work         ;
+;       |flipflop_t:comb_3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_15|flipflop_t:comb_3                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_15|flipflop_t:comb_4                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_5|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_15|flipflop_t:comb_5                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_6|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_15|flipflop_t:comb_6                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_7|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_15|flipflop_t:comb_7                              ; flipflop_t                    ; work         ;
+;    |clock_divisor:comb_16|                 ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_16                                                ; clock_divisor                 ; work         ;
+;       |flipflop_t:comb_3|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_16|flipflop_t:comb_3                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_4|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_16|flipflop_t:comb_4                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_5|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_16|flipflop_t:comb_5                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_6|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_16|flipflop_t:comb_6                              ; flipflop_t                    ; work         ;
+;       |flipflop_t:comb_7|                  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_16|flipflop_t:comb_7                              ; flipflop_t                    ; work         ;
+;    |clock_selector:comb_21|                ; 13 (5)      ; 9            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 9 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21                                               ; clock_selector                ; work         ;
+;       |clock_divisor:comb_3|               ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|clock_divisor:comb_3                          ; clock_divisor                 ; work         ;
+;          |flipflop_t:comb_3|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|clock_divisor:comb_3|flipflop_t:comb_3        ; flipflop_t                    ; work         ;
+;          |flipflop_t:comb_4|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|clock_divisor:comb_3|flipflop_t:comb_4        ; flipflop_t                    ; work         ;
+;          |flipflop_t:comb_5|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|clock_divisor:comb_3|flipflop_t:comb_5        ; flipflop_t                    ; work         ;
+;          |flipflop_t:comb_6|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|clock_divisor:comb_3|flipflop_t:comb_6        ; flipflop_t                    ; work         ;
+;          |flipflop_t:comb_7|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|clock_divisor:comb_3|flipflop_t:comb_7        ; flipflop_t                    ; work         ;
+;       |little_clock_divisor:comb_4|        ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_4                   ; little_clock_divisor          ; work         ;
+;          |flipflop_t:comb_3|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_4|flipflop_t:comb_3 ; flipflop_t                    ; work         ;
+;       |little_clock_divisor:comb_5|        ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_5                   ; little_clock_divisor          ; work         ;
+;          |flipflop_t:comb_3|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_5|flipflop_t:comb_3 ; flipflop_t                    ; work         ;
+;       |little_clock_divisor:comb_6|        ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_6                   ; little_clock_divisor          ; work         ;
+;          |flipflop_t:comb_3|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_6|flipflop_t:comb_3 ; flipflop_t                    ; work         ;
+;    |limp_register:comb_24|                 ; 13 (13)     ; 3            ; 0          ; 0    ; 0            ; 10 (10)      ; 2 (2)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|limp_register:comb_24                                                ; limp_register                 ; work         ;
+;    |matrix_alternate_display_mode:comb_29| ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_alternate_display_mode:comb_29                                ; matrix_alternate_display_mode ; work         ;
+;       |matrix_image_selector:comb_3|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_alternate_display_mode:comb_29|matrix_image_selector:comb_3   ; matrix_image_selector         ; work         ;
+;    |matrix_column_selector:comb_30|        ; 26 (21)     ; 5            ; 0          ; 0    ; 0            ; 21 (21)      ; 3 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_column_selector:comb_30                                       ; matrix_column_selector        ; work         ;
+;       |column_selector:comb_3|             ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 3 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_column_selector:comb_30|column_selector:comb_3                ; column_selector               ; work         ;
+;          |flipflop_d:D0|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D0  ; flipflop_d                    ; work         ;
+;          |flipflop_d:D1|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D1  ; flipflop_d                    ; work         ;
+;          |flipflop_d:D2|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D2  ; flipflop_d                    ; work         ;
+;          |flipflop_d:D3|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D3  ; flipflop_d                    ; work         ;
+;          |flipflop_d:D4|                   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D4  ; flipflop_d                    ; work         ;
+;    |nivel_caixa:comb_23|                   ; 18 (18)     ; 7            ; 0          ; 0    ; 0            ; 11 (11)      ; 3 (3)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |main|nivel_caixa:comb_23                                                  ; nivel_caixa                   ; work         ;
+;    |valida_rega:comb_22|                   ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|valida_rega:comb_22                                                  ; valida_rega                   ; work         ;
++--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------+-------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------+
+; State Machine - |main|MEF1:comb_26|state                   ;
++------------+------------+------------+----------+----------+
+; Name       ; state.REGA ; state.ERRO ; state.EN ; state.VZ ;
++------------+------------+------------+----------+----------+
+; state.VZ   ; 0          ; 0          ; 0        ; 0        ;
+; state.EN   ; 0          ; 0          ; 1        ; 1        ;
+; state.ERRO ; 0          ; 1          ; 0        ; 1        ;
+; state.REGA ; 1          ; 0          ; 0        ; 1        ;
++------------+------------+------------+----------+----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------+
+; State Machine - |main|MEF2:comb_25|state        ;
++------------+------------+-----------+-----------+
+; Name       ; state.NADA ; state.ASP ; state.GOT ;
++------------+------------+-----------+-----------+
+; state.NADA ; 0          ; 0         ; 0         ;
+; state.GOT  ; 1          ; 0         ; 1         ;
+; state.ASP  ; 1          ; 1         ; 0         ;
++------------+------------+-----------+-----------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------+
+; State Machine - |main|limp_register:comb_24|state ;
++------------+------------+------------+------------+
+; Name       ; state.NADA ; state.LIMP ; state.ADB  ;
++------------+------------+------------+------------+
+; state.NADA ; 0          ; 0          ; 0          ;
+; state.ADB  ; 1          ; 0          ; 1          ;
+; state.LIMP ; 1          ; 1          ; 0          ;
++------------+------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++----------------------------------------------------+---------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal             ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------------+------------------------+
+; limp_register:comb_24|nextstate.ADB_83             ; limp_register:comb_24|Selector1 ; yes                    ;
+; limp_register:comb_24|nextstate.LIMP_72            ; limp_register:comb_24|Selector1 ; yes                    ;
+; limp_register:comb_24|nextstate.NADA_94            ; limp_register:comb_24|Selector1 ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                                 ;                        ;
++----------------------------------------------------+---------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; MEF1:comb_26|state~4                  ; Lost fanout        ;
+; MEF1:comb_26|state~5                  ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 22    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                    ;
++-----------------------------------------------------------------------+---------+
+; Inverted Register                                                     ; Fan out ;
++-----------------------------------------------------------------------+---------+
+; matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D4|q ; 6       ;
+; Total number of inverted registers = 1                                ;         ;
++-----------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |main|matrix_column_selector:comb_30|coluna_selecionada[6] ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |main|matrix_column_selector:comb_30|coluna_selecionada[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: limp_register:comb_24 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; NADA           ; 00    ; Unsigned Binary                           ;
+; ADB            ; 01    ; Unsigned Binary                           ;
+; LIMP           ; 10    ; Unsigned Binary                           ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEF2:comb_25 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; NADA           ; 00    ; Unsigned Binary                  ;
+; ASP            ; 10    ; Unsigned Binary                  ;
+; GOT            ; 01    ; Unsigned Binary                  ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEF1:comb_26 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; VZ             ; 00    ; Unsigned Binary                  ;
+; EN             ; 01    ; Unsigned Binary                  ;
+; ERRO           ; 10    ; Unsigned Binary                  ;
+; REGA           ; 11    ; Unsigned Binary                  ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: matrix_alternate_display_mode:comb_29|matrix_image_selector:comb_3 ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; idle           ; 000   ; Unsigned Binary                                                                        ;
+; gotejamento    ; 001   ; Unsigned Binary                                                                        ;
+; aspersao       ; 010   ; Unsigned Binary                                                                        ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D0"                                                                                                                 ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; set[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D1"                                                                                                                 ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; set[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D2"                                                                                                                 ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; set[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D3"                                                                                                                 ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; set[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D4"                                                                                                                   ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_selector:comb_21|clock_divisor:comb_8"                                                                                                                                                ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; new_frequency ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; reset         ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1]     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_selector:comb_21|clock_divisor:comb_7"                                                                                                                                           ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_selector:comb_21|little_clock_divisor:comb_6"                                                                                                                                    ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_selector:comb_21|little_clock_divisor:comb_5"                                                                                                                                    ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_selector:comb_21|little_clock_divisor:comb_4|flipflop_t:comb_3"                                                                                                              ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_selector:comb_21|little_clock_divisor:comb_4"                                                                                                                                    ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_selector:comb_21|clock_divisor:comb_3"                                                                                                                                           ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_16"                                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_15"                                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_14"                                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_13"                                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_7"                                                                                                                                           ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_6"                                                                                                                                           ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_5"                                                                                                                                           ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_4"                                                                                                                                           ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_12|flipflop_t:comb_3"                                                                                                                                           ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divisor:comb_12"                                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Jul 23 21:00:04 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pbl3-finite-state-machine -c pbl3-finite-state-machine
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file main.v
+    Info (12023): Found entity 1: main File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mefs/mef1.v
+    Info (12023): Found entity 1: MEF1 File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mefs/mef2.v
+    Info (12023): Found entity 1: MEF2 File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/functions/decoder_caixa_dagua.v
+    Info (12023): Found entity 1: decoder_caixa_dagua File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/decoder_caixa_dagua.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/functions/limp_register.v
+    Info (12023): Found entity 1: limp_register File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/functions/nivel_caixa.v
+    Info (12023): Found entity 1: nivel_caixa File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/functions/valida_rega.v
+    Info (12023): Found entity 1: valida_rega File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/matrix/column_selector.v
+    Info (12023): Found entity 1: column_selector File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/column_selector.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/matrix/matrix_alternate_display_mode.v
+    Info (12023): Found entity 1: matrix_alternate_display_mode File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/matrix/matrix_column_selector.v
+    Info (12023): Found entity 1: matrix_column_selector File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_column_selector.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/matrix/matrix_image_selector.v
+    Info (12023): Found entity 1: matrix_image_selector File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_image_selector.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file utils/clock_definer.v
+    Info (12023): Found entity 1: clock_definer File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file utils/clock_divisor.v
+    Info (12023): Found entity 1: clock_divisor File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file utils/flipflop_d.v
+    Info (12023): Found entity 1: flipflop_d File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_d.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file utils/flipflop_t.v
+    Info (12023): Found entity 1: flipflop_t File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_t.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file utils/little_clock_divisor.v
+    Info (12023): Found entity 1: little_clock_divisor File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file utils/clock_selector.v
+    Info (12023): Found entity 1: clock_selector File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at main.v(39): created implicit net for "rega" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at main.v(48): created implicit net for "new_frequency1" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at main.v(49): created implicit net for "new_frequency2" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at main.v(50): created implicit net for "new_frequency3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at main.v(51): created implicit net for "new_frequency4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at main.v(52): created implicit net for "new_frequency5" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at main.v(55): created implicit net for "limp" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(20): created implicit net for "aduba" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(21): created implicit net for "not_duba" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(25): created implicit net for "erro_nivel" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(26): created implicit net for "erro_aduba" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(10): created implicit net for "reduced_clock_1" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(13): created implicit net for "reduced_clock_2" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(14): created implicit net for "reduced_clock_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(8): created implicit net for "wire_1" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(9): created implicit net for "wire_2" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(10): created implicit net for "wire_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(11): created implicit net for "wire_4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(8): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(9): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(10): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(11): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(13): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(48): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 48
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(49): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 49
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(50): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 50
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(51): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 51
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(52): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 52
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(12): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at little_clock_divisor.v(8): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(13): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(14): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(15): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(16): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(17): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(61): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 61
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(62): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 62
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(63): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 63
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(64): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 64
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(65): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 65
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(66): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 66
+Critical Warning (10846): Verilog HDL Instantiation warning at matrix_alternate_display_mode.v(25): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at matrix_alternate_display_mode.v(30): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 30
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(80): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 80
+Critical Warning (10846): Verilog HDL Instantiation warning at matrix_column_selector.v(15): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_column_selector.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(88): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 88
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(10): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(11): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(13): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(14): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(15): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 15
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10739): Verilog HDL warning at main.v(39): actual bit length 2 differs from formal bit length 1 File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 39
+Info (12128): Elaborating entity "clock_divisor" for hierarchy "clock_divisor:comb_12" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 48
+Info (12128): Elaborating entity "flipflop_t" for hierarchy "clock_divisor:comb_12|flipflop_t:comb_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Info (12128): Elaborating entity "clock_selector" for hierarchy "clock_selector:comb_21" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 61
+Info (12128): Elaborating entity "little_clock_divisor" for hierarchy "clock_selector:comb_21|little_clock_divisor:comb_4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 13
+Info (12128): Elaborating entity "valida_rega" for hierarchy "valida_rega:comb_22" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 62
+Warning (10036): Verilog HDL or VHDL warning at valida_rega.v(21): object "not_duba" assigned a value but never read File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 21
+Info (12128): Elaborating entity "nivel_caixa" for hierarchy "nivel_caixa:comb_23" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 63
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(37): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 37
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(47): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 47
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(58): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 58
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(60): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 60
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(62): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 62
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(72): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 72
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(74): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 74
+Info (12128): Elaborating entity "limp_register" for hierarchy "limp_register:comb_24" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 64
+Warning (10240): Verilog HDL Always Construct warning at limp_register.v(33): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
+Info (10041): Inferred latch for "nextstate.LIMP" at limp_register.v(33) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
+Info (10041): Inferred latch for "nextstate.ADB" at limp_register.v(33) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
+Info (10041): Inferred latch for "nextstate.NADA" at limp_register.v(33) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
+Info (12128): Elaborating entity "MEF2" for hierarchy "MEF2:comb_25" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 65
+Info (12128): Elaborating entity "MEF1" for hierarchy "MEF1:comb_26" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 66
+Info (12128): Elaborating entity "matrix_alternate_display_mode" for hierarchy "matrix_alternate_display_mode:comb_29" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 80
+Info (12128): Elaborating entity "matrix_image_selector" for hierarchy "matrix_alternate_display_mode:comb_29|matrix_image_selector:comb_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 25
+Info (12128): Elaborating entity "decoder_caixa_dagua" for hierarchy "matrix_alternate_display_mode:comb_29|decoder_caixa_dagua:comb_4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 30
+Info (12128): Elaborating entity "matrix_column_selector" for hierarchy "matrix_column_selector:comb_30" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 88
+Info (12128): Elaborating entity "column_selector" for hierarchy "matrix_column_selector:comb_30|column_selector:comb_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_column_selector.v Line: 15
+Info (12128): Elaborating entity "flipflop_d" for hierarchy "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/column_selector.v Line: 3
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (12241): 22 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch limp_register:comb_24|nextstate.ADB_83 has unsafe behavior File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal nivel_caixa:comb_23|count[2] File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 86
+Warning (13012): Latch limp_register:comb_24|nextstate.LIMP_72 has unsafe behavior File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal limp_register:comb_24|state.LIMP File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 16
+Warning (13012): Latch limp_register:comb_24|nextstate.NADA_94 has unsafe behavior File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal limp_register:comb_24|state.LIMP File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 16
+Info (18000): Registers with preset signals will power-up high File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_d.v Line: 2
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 149 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 120 logic cells
+Info (144001): Generated suppressed messages file C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/output_files/pbl3-finite-state-machine.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 106 warnings
+    Info: Peak virtual memory: 4706 megabytes
+    Info: Processing ended: Tue Jul 23 21:00:14 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/output_files/pbl3-finite-state-machine.map.smsg.
+
+

@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Tue Jul 23 21:00:14 2024
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : pbl3-finite-state-machine
+Top-level Entity Name : main
+Family : MAX II
+Total logic elements : 120
+Total pins : 29
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

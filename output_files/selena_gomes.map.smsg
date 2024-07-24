@@ -1,3 +1,0 @@
-Info (10281): Verilog HDL Declaration information at MEF1.v(1): object "rega" differs only in case from object "REGA" in the same scope File: /home/aluno/PBL3_2teste/pbl3-finite-state-machine-Paulo1302-patch-2/MEF1.v Line: 1
-Info (10281): Verilog HDL Declaration information at limp_register.v(1): object "adb" differs only in case from object "ADB" in the same scope File: /home/aluno/PBL3_2teste/pbl3-finite-state-machine-Paulo1302-patch-2/limp_register.v Line: 1
-Warning (10268): Verilog HDL information at clock_selector.v(18): always construct contains both blocking and non-blocking assignments File: /home/aluno/PBL3_2teste/pbl3-finite-state-machine-Paulo1302-patch-2/output_files/clock_selector.v Line: 18
