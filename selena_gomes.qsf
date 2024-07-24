@@ -65,15 +65,11 @@ set_location_assignment PIN_42 -to asp
 set_location_assignment PIN_40 -to got
 set_location_assignment PIN_52 -to reset
 set_location_assignment PIN_50 -to adb
-set_location_assignment PIN_54 -to cout_Nivel[0]
-set_location_assignment PIN_55 -to cout_Nivel[1]
-set_location_assignment PIN_57 -to cout_Nivel[2]
-set_location_assignment PIN_76 -to VE
 set_location_assignment PIN_69 -to test_MEF1_b1
 set_location_assignment PIN_67 -to test_MEF1_b0
 set_global_assignment -name VERILOG_FILE MEF2.v
 set_global_assignment -name VERILOG_FILE limp_register.v
-set_location_assignment PIN_72 -to limpeza[0]
+set_location_assignment PIN_73 -to limpeza[0]
 set_global_assignment -name VERILOG_FILE valida_rega.v
 set_global_assignment -name VERILOG_FILE column_selector.v
 set_global_assignment -name VERILOG_FILE matrix_alternate_display_mode.v
@@ -97,3 +93,6 @@ set_global_assignment -name VERILOG_FILE output_files/clock_selector.v
 set_global_assignment -name VERILOG_FILE little_clock_divisor.v
 set_location_assignment PIN_86 -to erro
 set_location_assignment PIN_74 -to rgb_l
+set_location_assignment PIN_75 -to limpeza[1]
+set_location_assignment PIN_72 -to rgb_verde
+set_location_assignment PIN_76 -to led_valvule

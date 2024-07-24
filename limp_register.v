@@ -1,4 +1,4 @@
-module limp_register(output [1:0]cout, input rega,input adb, input low, input ve, input reset, input clock);
+module limp_register(output [1:0]cout, input rega,input adb, input low, input ve, input reset, input clock, input critico);
 	
 	
 	parameter NADA = 2'b00;
@@ -12,9 +12,10 @@ module limp_register(output [1:0]cout, input rega,input adb, input low, input ve
 	not (resetN,reset);
 	not (adbn,adb);
 	
-	always @(posedge clock, posedge resetN)
+	always @(posedge clock, posedge resetN)begin
 	if (resetN) state <= NADA;
 	else state <= nextstate;
+	end
 	
 	
 
@@ -22,13 +23,14 @@ module limp_register(output [1:0]cout, input rega,input adb, input low, input ve
 	case (state)
 		NADA: 
 		if (!ve & adbn & low) nextstate = ADB;
-		else nextstate = NADA;
+		else nextstate = state;
 		
 		ADB: if (!ve & !low ) nextstate = LIMP;
-		else nextstate = ADB;
+		else nextstate = state;
 		
-		LIMP: if (ve & !adbn & !low) nextstate = NADA;
-		else if (!ve & !adbn & !low) nextstate = LIMP;
+		LIMP: if (!adbn & !critico) nextstate = NADA;
+		else if (!ve & !adbn & !low) nextstate = state;
+		
 		
 		
 		default: nextstate = NADA;
