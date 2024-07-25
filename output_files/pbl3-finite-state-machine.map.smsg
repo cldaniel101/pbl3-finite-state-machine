@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at MEF1.v(5): object "rega" differs only in case from object "REGA" in the same scope File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF1.v Line: 5
+Info (10281): Verilog HDL Declaration information at MEF2.v(9): object "ASP" differs only in case from object "asp" in the same scope File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF2.v Line: 9
+Info (10281): Verilog HDL Declaration information at MEF2.v(10): object "GOT" differs only in case from object "got" in the same scope File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF2.v Line: 10
+Info (10281): Verilog HDL Declaration information at limp_register.v(4): object "adb" differs only in case from object "ADB" in the same scope File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 4
