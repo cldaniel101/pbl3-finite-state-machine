@@ -1,6 +1,6 @@
 Analysis & Synthesis report for pbl3-finite-state-machine
-Tue Jul 23 21:00:14 2024
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Wed Jul 24 15:57:54 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -75,13 +75,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jul 23 21:00:14 2024       ;
-; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status ; Successful - Wed Jul 24 15:57:54 2024       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; pbl3-finite-state-machine                   ;
 ; Top-level Entity Name       ; main                                        ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 120                                         ;
-; Total pins                  ; 29                                          ;
+; Total logic elements        ; 121                                         ;
+; Total pins                  ; 25                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -163,8 +163,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -174,28 +174,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
-+------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path               ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                           ; Library ;
-+------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
-; main.v                                         ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v                                         ;         ;
-; mefs/MEF1.v                                    ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF1.v                                    ;         ;
-; mefs/MEF2.v                                    ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF2.v                                    ;         ;
-; modules/functions/decoder_caixa_dagua.v        ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/decoder_caixa_dagua.v        ;         ;
-; modules/functions/limp_register.v              ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v              ;         ;
-; modules/functions/nivel_caixa.v                ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v                ;         ;
-; modules/functions/valida_rega.v                ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v                ;         ;
-; modules/matrix/column_selector.v               ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/column_selector.v               ;         ;
-; modules/matrix/matrix_alternate_display_mode.v ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v ;         ;
-; modules/matrix/matrix_column_selector.v        ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_column_selector.v        ;         ;
-; modules/matrix/matrix_image_selector.v         ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_image_selector.v         ;         ;
-; utils/clock_divisor.v                          ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v                          ;         ;
-; utils/flipflop_d.v                             ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_d.v                             ;         ;
-; utils/flipflop_t.v                             ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_t.v                             ;         ;
-; utils/little_clock_divisor.v                   ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v                   ;         ;
-; utils/clock_selector.v                         ; yes             ; User Verilog HDL File  ; C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v                         ;         ;
-+------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                 ; Library ;
++------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------+---------+
+; main.v                                         ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/main.v                                         ;         ;
+; mefs/MEF1.v                                    ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/mefs/MEF1.v                                    ;         ;
+; mefs/MEF2.v                                    ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/mefs/MEF2.v                                    ;         ;
+; modules/functions/decoder_caixa_dagua.v        ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/decoder_caixa_dagua.v        ;         ;
+; modules/functions/limp_register.v              ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v              ;         ;
+; modules/functions/nivel_caixa.v                ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v                ;         ;
+; modules/functions/valida_rega.v                ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/valida_rega.v                ;         ;
+; modules/matrix/column_selector.v               ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/column_selector.v               ;         ;
+; modules/matrix/matrix_alternate_display_mode.v ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_alternate_display_mode.v ;         ;
+; modules/matrix/matrix_column_selector.v        ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_column_selector.v        ;         ;
+; modules/matrix/matrix_image_selector.v         ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_image_selector.v         ;         ;
+; utils/clock_divisor.v                          ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v                          ;         ;
+; utils/flipflop_d.v                             ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/utils/flipflop_d.v                             ;         ;
+; utils/flipflop_t.v                             ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/utils/flipflop_t.v                             ;         ;
+; utils/little_clock_divisor.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/utils/little_clock_divisor.v                   ;         ;
+; utils/clock_selector.v                         ; yes             ; User Verilog HDL File  ; /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v                         ;         ;
++------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -203,20 +203,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 120   ;
-;     -- Combinational with no register       ; 64    ;
+; Total logic elements                        ; 121   ;
+;     -- Combinational with no register       ; 65    ;
 ;     -- Register only                        ; 8     ;
 ;     -- Combinational with a register        ; 48    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 52    ;
 ;     -- 3 input functions                    ; 14    ;
-;     -- 2 input functions                    ; 10    ;
+;     -- 2 input functions                    ; 11    ;
 ;     -- 1 input functions                    ; 36    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 120   ;
+;     -- normal mode                          ; 121   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -224,11 +224,11 @@ https://fpgasoftware.intel.com/eula.
 ;     -- asynchronous clear/load mode         ; 22    ;
 ;                                             ;       ;
 ; Total registers                             ; 56    ;
-; I/O pins                                    ; 29    ;
+; I/O pins                                    ; 25    ;
 ; Maximum fan-out node                        ; reset ;
 ; Maximum fan-out                             ; 22    ;
-; Total fan-out                               ; 416   ;
-; Average fan-out                             ; 2.79  ;
+; Total fan-out                               ; 414   ;
+; Average fan-out                             ; 2.84  ;
 +---------------------------------------------+-------+
 
 
@@ -237,7 +237,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node                 ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                        ; Entity Name                   ; Library Name ;
 +--------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------+-------------------------------+--------------+
-; |main                                      ; 120 (6)     ; 56           ; 0          ; 29   ; 0            ; 64 (6)       ; 8 (0)             ; 48 (0)           ; 0 (0)           ; 0 (0)      ; |main                                                                      ; main                          ; work         ;
+; |main                                      ; 121 (6)     ; 56           ; 0          ; 25   ; 0            ; 65 (6)       ; 8 (0)             ; 48 (0)           ; 0 (0)           ; 0 (0)      ; |main                                                                      ; main                          ; work         ;
 ;    |MEF1:comb_26|                          ; 11 (11)     ; 4            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |main|MEF1:comb_26                                                         ; MEF1                          ; work         ;
 ;    |MEF2:comb_25|                          ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |main|MEF2:comb_25                                                         ; MEF2                          ; work         ;
 ;    |clock_divisor:comb_12|                 ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_divisor:comb_12                                                ; clock_divisor                 ; work         ;
@@ -283,7 +283,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |flipflop_t:comb_3|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_5|flipflop_t:comb_3 ; flipflop_t                    ; work         ;
 ;       |little_clock_divisor:comb_6|        ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_6                   ; little_clock_divisor          ; work         ;
 ;          |flipflop_t:comb_3|               ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|clock_selector:comb_21|little_clock_divisor:comb_6|flipflop_t:comb_3 ; flipflop_t                    ; work         ;
-;    |limp_register:comb_24|                 ; 13 (13)     ; 3            ; 0          ; 0    ; 0            ; 10 (10)      ; 2 (2)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|limp_register:comb_24                                                ; limp_register                 ; work         ;
+;    |limp_register:comb_24|                 ; 14 (14)     ; 3            ; 0          ; 0    ; 0            ; 11 (11)      ; 2 (2)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|limp_register:comb_24                                                ; limp_register                 ; work         ;
 ;    |matrix_alternate_display_mode:comb_29| ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_alternate_display_mode:comb_29                                ; matrix_alternate_display_mode ; work         ;
 ;       |matrix_image_selector:comb_3|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_alternate_display_mode:comb_29|matrix_image_selector:comb_3   ; matrix_image_selector         ; work         ;
 ;    |matrix_column_selector:comb_30|        ; 26 (21)     ; 5            ; 0          ; 0    ; 0            ; 21 (21)      ; 3 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |main|matrix_column_selector:comb_30                                       ; matrix_column_selector        ; work         ;
@@ -341,9 +341,9 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+---------------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal             ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------------------+------------------------+
-; limp_register:comb_24|nextstate.ADB_83             ; limp_register:comb_24|Selector1 ; yes                    ;
-; limp_register:comb_24|nextstate.LIMP_72            ; limp_register:comb_24|Selector1 ; yes                    ;
-; limp_register:comb_24|nextstate.NADA_94            ; limp_register:comb_24|Selector1 ; yes                    ;
+; limp_register:comb_24|nextstate.ADB_82             ; limp_register:comb_24|Selector1 ; yes                    ;
+; limp_register:comb_24|nextstate.LIMP_71            ; limp_register:comb_24|Selector1 ; yes                    ;
+; limp_register:comb_24|nextstate.NADA_93            ; limp_register:comb_24|Selector1 ; yes                    ;
 ; Number of user-specified and inferred latches = 3  ;                                 ;                        ;
 +----------------------------------------------------+---------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -390,8 +390,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |main|matrix_column_selector:comb_30|coluna_selecionada[6] ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |main|matrix_column_selector:comb_30|coluna_selecionada[4] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |main|matrix_column_selector:comb_30|coluna_selecionada[1] ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |main|matrix_column_selector:comb_30|coluna_selecionada[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
 
@@ -670,186 +670,189 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Jul 23 21:00:04 2024
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Jul 24 15:57:48 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pbl3-finite-state-machine -c pbl3-finite-state-machine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mefs/mef1.v
-    Info (12023): Found entity 1: MEF1 File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mefs/mef2.v
-    Info (12023): Found entity 1: MEF2 File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/mefs/MEF2.v Line: 1
+    Info (12023): Found entity 1: main File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mefs/MEF1.v
+    Info (12023): Found entity 1: MEF1 File: /home/aluno/pbl3-finite-state-machine-oficial/mefs/MEF1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mefs/MEF2.v
+    Info (12023): Found entity 1: MEF2 File: /home/aluno/pbl3-finite-state-machine-oficial/mefs/MEF2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/functions/decoder_caixa_dagua.v
-    Info (12023): Found entity 1: decoder_caixa_dagua File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/decoder_caixa_dagua.v Line: 1
+    Info (12023): Found entity 1: decoder_caixa_dagua File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/decoder_caixa_dagua.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/functions/limp_register.v
-    Info (12023): Found entity 1: limp_register File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 1
+    Info (12023): Found entity 1: limp_register File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/functions/nivel_caixa.v
-    Info (12023): Found entity 1: nivel_caixa File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 1
+    Info (12023): Found entity 1: nivel_caixa File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/functions/valida_rega.v
-    Info (12023): Found entity 1: valida_rega File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 1
+    Info (12023): Found entity 1: valida_rega File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/valida_rega.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/matrix/column_selector.v
-    Info (12023): Found entity 1: column_selector File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/column_selector.v Line: 1
+    Info (12023): Found entity 1: column_selector File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/column_selector.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/matrix/matrix_alternate_display_mode.v
-    Info (12023): Found entity 1: matrix_alternate_display_mode File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 1
+    Info (12023): Found entity 1: matrix_alternate_display_mode File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_alternate_display_mode.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/matrix/matrix_column_selector.v
-    Info (12023): Found entity 1: matrix_column_selector File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_column_selector.v Line: 1
+    Info (12023): Found entity 1: matrix_column_selector File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_column_selector.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/matrix/matrix_image_selector.v
-    Info (12023): Found entity 1: matrix_image_selector File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_image_selector.v Line: 1
+    Info (12023): Found entity 1: matrix_image_selector File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_image_selector.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file utils/clock_definer.v
-    Info (12023): Found entity 1: clock_definer File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 1
+    Info (12023): Found entity 1: clock_definer File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file utils/clock_divisor.v
-    Info (12023): Found entity 1: clock_divisor File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 1
+    Info (12023): Found entity 1: clock_divisor File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file utils/flipflop_d.v
-    Info (12023): Found entity 1: flipflop_d File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_d.v Line: 1
+    Info (12023): Found entity 1: flipflop_d File: /home/aluno/pbl3-finite-state-machine-oficial/utils/flipflop_d.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file utils/flipflop_t.v
-    Info (12023): Found entity 1: flipflop_t File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_t.v Line: 1
+    Info (12023): Found entity 1: flipflop_t File: /home/aluno/pbl3-finite-state-machine-oficial/utils/flipflop_t.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file utils/little_clock_divisor.v
-    Info (12023): Found entity 1: little_clock_divisor File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v Line: 1
+    Info (12023): Found entity 1: little_clock_divisor File: /home/aluno/pbl3-finite-state-machine-oficial/utils/little_clock_divisor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file utils/clock_selector.v
-    Info (12023): Found entity 1: clock_selector File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at main.v(39): created implicit net for "rega" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at main.v(48): created implicit net for "new_frequency1" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 48
-Warning (10236): Verilog HDL Implicit Net warning at main.v(49): created implicit net for "new_frequency2" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 49
-Warning (10236): Verilog HDL Implicit Net warning at main.v(50): created implicit net for "new_frequency3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at main.v(51): created implicit net for "new_frequency4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 51
-Warning (10236): Verilog HDL Implicit Net warning at main.v(52): created implicit net for "new_frequency5" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 52
-Warning (10236): Verilog HDL Implicit Net warning at main.v(55): created implicit net for "limp" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 55
-Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(20): created implicit net for "aduba" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(21): created implicit net for "not_duba" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(25): created implicit net for "erro_nivel" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(26): created implicit net for "erro_aduba" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(10): created implicit net for "reduced_clock_1" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(13): created implicit net for "reduced_clock_2" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 13
-Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(14): created implicit net for "reduced_clock_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 14
-Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(8): created implicit net for "wire_1" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(9): created implicit net for "wire_2" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(10): created implicit net for "wire_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(11): created implicit net for "wire_4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(8): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(9): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(10): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(11): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(13): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(48): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 48
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(49): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 49
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(50): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 50
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(51): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 51
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(52): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 52
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(12): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 12
-Critical Warning (10846): Verilog HDL Instantiation warning at little_clock_divisor.v(8): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v Line: 8
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(13): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 13
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(14): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 14
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(15): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 15
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(16): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 16
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(17): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 17
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(61): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 61
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(62): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 62
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(63): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 63
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(64): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 64
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(65): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 65
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(66): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 66
-Critical Warning (10846): Verilog HDL Instantiation warning at matrix_alternate_display_mode.v(25): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 25
-Critical Warning (10846): Verilog HDL Instantiation warning at matrix_alternate_display_mode.v(30): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 30
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(80): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 80
-Critical Warning (10846): Verilog HDL Instantiation warning at matrix_column_selector.v(15): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_column_selector.v Line: 15
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(88): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 88
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(10): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 10
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(11): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 11
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(13): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 13
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(14): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 14
-Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(15): instance has no name File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_definer.v Line: 15
+    Info (12023): Found entity 1: clock_selector File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at main.v(39): created implicit net for "rega" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at main.v(48): created implicit net for "new_frequency1" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at main.v(49): created implicit net for "new_frequency2" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at main.v(50): created implicit net for "new_frequency3" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at main.v(51): created implicit net for "new_frequency4" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at main.v(52): created implicit net for "new_frequency5" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at main.v(55): created implicit net for "limp" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at main.v(58): created implicit net for "VE" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at limp_register.v(12): created implicit net for "resetN" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at limp_register.v(13): created implicit net for "adbn" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(20): created implicit net for "aduba" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/valida_rega.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(21): created implicit net for "not_duba" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/valida_rega.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(25): created implicit net for "erro_nivel" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/valida_rega.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at valida_rega.v(26): created implicit net for "erro_aduba" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/valida_rega.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(10): created implicit net for "reduced_clock_1" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(13): created implicit net for "reduced_clock_2" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at clock_definer.v(14): created implicit net for "reduced_clock_3" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(8): created implicit net for "wire_1" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(9): created implicit net for "wire_2" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(10): created implicit net for "wire_3" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at clock_divisor.v(11): created implicit net for "wire_4" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(8): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(9): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(10): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(11): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_divisor.v(13): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(48): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 48
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(49): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 49
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(50): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 50
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(51): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 51
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(52): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 52
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(12): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at little_clock_divisor.v(8): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/little_clock_divisor.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(13): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(14): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(15): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(16): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_selector.v(17): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(61): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 61
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(62): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 62
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(63): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 63
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(64): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 64
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(65): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 65
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(66): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 66
+Critical Warning (10846): Verilog HDL Instantiation warning at matrix_alternate_display_mode.v(25): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_alternate_display_mode.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at matrix_alternate_display_mode.v(30): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_alternate_display_mode.v Line: 30
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(80): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 80
+Critical Warning (10846): Verilog HDL Instantiation warning at matrix_column_selector.v(15): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_column_selector.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(88): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 88
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(10): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(11): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(13): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(14): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at clock_definer.v(15): instance has no name File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_definer.v Line: 15
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10739): Verilog HDL warning at main.v(39): actual bit length 2 differs from formal bit length 1 File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 39
-Info (12128): Elaborating entity "clock_divisor" for hierarchy "clock_divisor:comb_12" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 48
-Info (12128): Elaborating entity "flipflop_t" for hierarchy "clock_divisor:comb_12|flipflop_t:comb_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Info (12128): Elaborating entity "clock_selector" for hierarchy "clock_selector:comb_21" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 61
-Info (12128): Elaborating entity "little_clock_divisor" for hierarchy "clock_selector:comb_21|little_clock_divisor:comb_4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_selector.v Line: 13
-Info (12128): Elaborating entity "valida_rega" for hierarchy "valida_rega:comb_22" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 62
-Warning (10036): Verilog HDL or VHDL warning at valida_rega.v(21): object "not_duba" assigned a value but never read File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/valida_rega.v Line: 21
-Info (12128): Elaborating entity "nivel_caixa" for hierarchy "nivel_caixa:comb_23" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 63
-Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(37): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 37
-Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(47): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 47
-Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(58): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 58
-Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(60): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 60
-Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(62): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 62
-Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(72): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 72
-Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(74): truncated value with size 32 to match size of target (3) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 74
-Info (12128): Elaborating entity "limp_register" for hierarchy "limp_register:comb_24" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 64
-Warning (10240): Verilog HDL Always Construct warning at limp_register.v(33): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
-Info (10041): Inferred latch for "nextstate.LIMP" at limp_register.v(33) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
-Info (10041): Inferred latch for "nextstate.ADB" at limp_register.v(33) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
-Info (10041): Inferred latch for "nextstate.NADA" at limp_register.v(33) File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
-Info (12128): Elaborating entity "MEF2" for hierarchy "MEF2:comb_25" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 65
-Info (12128): Elaborating entity "MEF1" for hierarchy "MEF1:comb_26" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 66
-Info (12128): Elaborating entity "matrix_alternate_display_mode" for hierarchy "matrix_alternate_display_mode:comb_29" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 80
-Info (12128): Elaborating entity "matrix_image_selector" for hierarchy "matrix_alternate_display_mode:comb_29|matrix_image_selector:comb_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 25
-Info (12128): Elaborating entity "decoder_caixa_dagua" for hierarchy "matrix_alternate_display_mode:comb_29|decoder_caixa_dagua:comb_4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_alternate_display_mode.v Line: 30
-Info (12128): Elaborating entity "matrix_column_selector" for hierarchy "matrix_column_selector:comb_30" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/main.v Line: 88
-Info (12128): Elaborating entity "column_selector" for hierarchy "matrix_column_selector:comb_30|column_selector:comb_3" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/matrix_column_selector.v Line: 15
-Info (12128): Elaborating entity "flipflop_d" for hierarchy "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D4" File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/matrix/column_selector.v Line: 3
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v Line: 8
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/little_clock_divisor.v Line: 8
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 13
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 11
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 10
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 9
-Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/clock_divisor.v Line: 8
+Warning (10739): Verilog HDL warning at main.v(39): actual bit length 2 differs from formal bit length 1 File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 39
+Info (12128): Elaborating entity "clock_divisor" for hierarchy "clock_divisor:comb_12" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 48
+Info (12128): Elaborating entity "flipflop_t" for hierarchy "clock_divisor:comb_12|flipflop_t:comb_3" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Info (12128): Elaborating entity "clock_selector" for hierarchy "clock_selector:comb_21" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 61
+Info (12128): Elaborating entity "little_clock_divisor" for hierarchy "clock_selector:comb_21|little_clock_divisor:comb_4" File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_selector.v Line: 13
+Info (12128): Elaborating entity "valida_rega" for hierarchy "valida_rega:comb_22" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 62
+Warning (10036): Verilog HDL or VHDL warning at valida_rega.v(21): object "not_duba" assigned a value but never read File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/valida_rega.v Line: 21
+Info (12128): Elaborating entity "nivel_caixa" for hierarchy "nivel_caixa:comb_23" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 63
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(40): truncated value with size 32 to match size of target (3) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 40
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(50): truncated value with size 32 to match size of target (3) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 50
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(61): truncated value with size 32 to match size of target (3) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 61
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(63): truncated value with size 32 to match size of target (3) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 63
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(65): truncated value with size 32 to match size of target (3) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 65
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(76): truncated value with size 32 to match size of target (3) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 76
+Warning (10230): Verilog HDL assignment warning at nivel_caixa.v(78): truncated value with size 32 to match size of target (3) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 78
+Info (12128): Elaborating entity "limp_register" for hierarchy "limp_register:comb_24" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 64
+Warning (10240): Verilog HDL Always Construct warning at limp_register.v(23): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 23
+Info (10041): Inferred latch for "nextstate.LIMP" at limp_register.v(23) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 23
+Info (10041): Inferred latch for "nextstate.ADB" at limp_register.v(23) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 23
+Info (10041): Inferred latch for "nextstate.NADA" at limp_register.v(23) File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 23
+Info (12128): Elaborating entity "MEF2" for hierarchy "MEF2:comb_25" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 65
+Info (12128): Elaborating entity "MEF1" for hierarchy "MEF1:comb_26" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 66
+Info (12128): Elaborating entity "matrix_alternate_display_mode" for hierarchy "matrix_alternate_display_mode:comb_29" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 80
+Info (12128): Elaborating entity "matrix_image_selector" for hierarchy "matrix_alternate_display_mode:comb_29|matrix_image_selector:comb_3" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_alternate_display_mode.v Line: 25
+Info (12128): Elaborating entity "decoder_caixa_dagua" for hierarchy "matrix_alternate_display_mode:comb_29|decoder_caixa_dagua:comb_4" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_alternate_display_mode.v Line: 30
+Info (12128): Elaborating entity "matrix_column_selector" for hierarchy "matrix_column_selector:comb_30" File: /home/aluno/pbl3-finite-state-machine-oficial/main.v Line: 88
+Info (12128): Elaborating entity "column_selector" for hierarchy "matrix_column_selector:comb_30|column_selector:comb_3" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/matrix_column_selector.v Line: 15
+Info (12128): Elaborating entity "flipflop_d" for hierarchy "matrix_column_selector:comb_30|column_selector:comb_3|flipflop_d:D4" File: /home/aluno/pbl3-finite-state-machine-oficial/modules/matrix/column_selector.v Line: 3
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/little_clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/little_clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_7" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 13
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_6" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 11
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_5" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 10
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_4" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 9
+Warning (12020): Port "ordered port 3" on the entity instantiation of "comb_3" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/aluno/pbl3-finite-state-machine-oficial/utils/clock_divisor.v Line: 8
 Warning (12241): 22 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch limp_register:comb_24|nextstate.ADB_83 has unsafe behavior File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal nivel_caixa:comb_23|count[2] File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/nivel_caixa.v Line: 86
-Warning (13012): Latch limp_register:comb_24|nextstate.LIMP_72 has unsafe behavior File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal limp_register:comb_24|state.LIMP File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 16
-Warning (13012): Latch limp_register:comb_24|nextstate.NADA_94 has unsafe behavior File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal limp_register:comb_24|state.LIMP File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/modules/functions/limp_register.v Line: 16
-Info (18000): Registers with preset signals will power-up high File: C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/utils/flipflop_d.v Line: 2
+Warning (13012): Latch limp_register:comb_24|nextstate.ADB_82 has unsafe behavior File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal nivel_caixa:comb_23|Valve_E File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/nivel_caixa.v Line: 3
+Warning (13012): Latch limp_register:comb_24|nextstate.LIMP_71 has unsafe behavior File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal limp_register:comb_24|state.LIMP File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 10
+Warning (13012): Latch limp_register:comb_24|nextstate.NADA_93 has unsafe behavior File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal limp_register:comb_24|state.LIMP File: /home/aluno/pbl3-finite-state-machine-oficial/modules/functions/limp_register.v Line: 10
+Info (18000): Registers with preset signals will power-up high File: /home/aluno/pbl3-finite-state-machine-oficial/utils/flipflop_d.v Line: 2
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 149 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 146 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 120 logic cells
-Info (144001): Generated suppressed messages file C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/output_files/pbl3-finite-state-machine.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 106 warnings
-    Info: Peak virtual memory: 4706 megabytes
-    Info: Processing ended: Tue Jul 23 21:00:14 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 121 logic cells
+Info (144001): Generated suppressed messages file /home/aluno/pbl3-finite-state-machine-oficial/output_files/pbl3-finite-state-machine.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 109 warnings
+    Info: Peak virtual memory: 341 megabytes
+    Info: Processing ended: Wed Jul 24 15:57:54 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/danie/OneDrive/Documentos/Quartus-CD/pbl3-finite-state-machine/output_files/pbl3-finite-state-machine.map.smsg.
+The suppressed messages can be found in /home/aluno/pbl3-finite-state-machine-oficial/output_files/pbl3-finite-state-machine.map.smsg.
 
 

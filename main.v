@@ -1,7 +1,6 @@
 module main (
     output [1:0] limpeza,
-    output VE, 
-    output [2:0] cout_Nivel, 
+ 
     output test_MEF1_b1, 
     output test_MEF1_b0,
     output erro,
@@ -32,7 +31,8 @@ module main (
     wire [1:0] cout_MEF1, cout_MEF2, rega_valida;
     wire new_clock;
     wire [6:0] column_4, column_3, column_2, column_1, column_0;
-
+	wire [2:0] cout_Nivel; 
+	
     // Logic
     not (reset_pulse, reset);
     not (adbN, adb);
@@ -61,7 +61,7 @@ module main (
     clock_selector(new_clock, new_frequency4, cout_MEF2, limpeza, erro, VE);
     valida_rega(rega_valida, erro, asp, got, cout_MEF1, limpeza, VE, critic);
     nivel_caixa(cout_Nivel, VE, rega_open, new_clock, reset, erro);
-    limp_register(limpeza, rega, aduba, Low, VE, critic, reset, new_frequency3);
+    limp_register(limpeza, rega, aduba, Low, VE, reset, new_frequency3, critic);
     MEF2(cout_MEF2, new_frequency3, reset, rega_valida);
     MEF1(cout_MEF1, critic, VE, rega, reset, new_frequency3);
 

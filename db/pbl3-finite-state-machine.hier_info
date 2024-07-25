@@ -1,10 +1,6 @@
 |main
 limpeza[0] << limpeza[0].DB_MAX_OUTPUT_PORT_TYPE
 limpeza[1] << limpeza[1].DB_MAX_OUTPUT_PORT_TYPE
-VE << VE.DB_MAX_OUTPUT_PORT_TYPE
-cout_Nivel[0] << cout_Nivel[0].DB_MAX_OUTPUT_PORT_TYPE
-cout_Nivel[1] << cout_Nivel[1].DB_MAX_OUTPUT_PORT_TYPE
-cout_Nivel[2] << cout_Nivel[2].DB_MAX_OUTPUT_PORT_TYPE
 test_MEF1_b1 << limpeza[1].DB_MAX_OUTPUT_PORT_TYPE
 test_MEF1_b0 << limpeza[0].DB_MAX_OUTPUT_PORT_TYPE
 erro << erro.DB_MAX_OUTPUT_PORT_TYPE
@@ -488,14 +484,12 @@ adb => always1.IN0
 low => always1.IN1
 low => always1.IN0
 low => always1.IN1
-low => always1.IN1
 ve => always1.IN1
 ve => always1.IN1
 ve => always1.IN1
-ve => always1.IN1
-critico => ~NO_FANOUT~
 reset => state~3.DATAIN
 clock => state~1.DATAIN
+critico => always1.IN1
 
 
 |main|MEF2:comb_25

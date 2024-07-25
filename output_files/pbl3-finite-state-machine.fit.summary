@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Jul 23 21:00:18 2024
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Fitter Status : Successful - Wed Jul 24 15:57:56 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : pbl3-finite-state-machine
 Top-level Entity Name : main
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 113 / 240 ( 47 % )
-Total pins : 29 / 80 ( 36 % )
+Total logic elements : 114 / 240 ( 48 % )
+Total pins : 25 / 80 ( 31 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

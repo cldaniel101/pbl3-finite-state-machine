@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EPM240T100C5
 set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:11:10  JULY 23, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -65,3 +65,28 @@ set_global_assignment -name VERILOG_FILE utils/flipflop_d.v
 set_global_assignment -name VERILOG_FILE utils/flipflop_t.v
 set_global_assignment -name VERILOG_FILE utils/little_clock_divisor.v
 set_global_assignment -name VERILOG_FILE utils/clock_selector.v
+set_location_assignment PIN_12 -to clock
+set_location_assignment PIN_42 -to asp
+set_location_assignment PIN_40 -to got
+set_location_assignment PIN_50 -to adb
+set_location_assignment PIN_86 -to erro
+set_location_assignment PIN_76 -to led_valvule
+set_location_assignment PIN_75 -to limpeza[1]
+set_location_assignment PIN_73 -to limpeza[0]
+set_location_assignment PIN_97 -to matrix_col_0
+set_location_assignment PIN_99 -to matrix_col_1
+set_location_assignment PIN_95 -to matrix_col_2
+set_location_assignment PIN_82 -to matrix_col_3
+set_location_assignment PIN_78 -to matrix_col_4
+set_location_assignment PIN_85 -to matrix_row_0
+set_location_assignment PIN_83 -to matrix_row_1
+set_location_assignment PIN_84 -to matrix_row_2
+set_location_assignment PIN_87 -to matrix_row_3
+set_location_assignment PIN_81 -to matrix_row_4
+set_location_assignment PIN_91 -to matrix_row_5
+set_location_assignment PIN_89 -to matrix_row_6
+set_location_assignment PIN_52 -to reset
+set_location_assignment PIN_74 -to rgb_l
+set_location_assignment PIN_72 -to rgb_verde
+set_location_assignment PIN_67 -to test_MEF1_b0
+set_location_assignment PIN_69 -to test_MEF1_b1
